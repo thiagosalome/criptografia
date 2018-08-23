@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<!-- meta tags -->
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="author" content="Thiago Gonçalves Salomé">
+	<meta name="description" content="Aplicação que criptografa palavras.">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<!-- change color browser mobile -->
+	<meta name="theme-color" content="#1b8e99">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#1b8e99">
+	<meta name="msapplication-navbutton-color" content="#1b8e99">
+
+	<!-- link css -->
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<link rel="stylesheet" href="assets/css/base/_default.css">
+	<link rel="stylesheet" href="assets/css/partials/_modal.css">
+	<link rel="stylesheet" href="assets/css/partials/_encrypt.css">
+	<link rel="stylesheet" href="assets/css/partials/_header.css">
+	<link rel="icon" href="assets/images/lock.png" />
+
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
+
+	<!-- site title -->
+	<title>Criptografia</title>
+</head>
+<body>
+	<main>
+		<header class="header">
+			<div class="container">
+				<figure><img src="assets/images/Criptografia.png" title="Criptografia" alt="Criptografia"></figure>
+			</div>
+		</header>
+		<section class="encrypt">
+			<div class="container">
+				<ul class="encrypt-options clearfix">
+					<li class="draggable" data-encrypt="caixadecesar">Caixa de César</li>
+					<li class="draggable" data-encrypt="cifradecesar">Cifra de César</li>
+					<li class="draggable" data-encrypt="cifrapolialfabetica">Cifra Polialfabética</li>
+				</ul>
+				<p class="encrypt-message">Arraste as opções de criptografia para caixa abaixo e clique em Confirmar: </p>
+				<ul class="encrypt-selected sortable">
+				</ul>
+				<button class="encrypt-btn js-confirm">Confirmar</button>
+				<button class="encrypt-btn js-reload">Recarregar</button>
+			</div>
+		</section>
+	</main>
+	<div class="modal js-close">
+		<div class="modal-content">
+			<header>
+				<span class="modal-close js-close"></span>
+				<label for="message" class="modal-title">O que deseja fazer? </label>
+				<div class="modal-options">
+					<ul>
+						<li>
+							<input type="radio" name="option" id="encrypt" value="encrypt" class="js-modcheck">
+							<label for="encrypt"><span></span> Criptografar</label>
+						</li>
+						<li>
+							<input type="radio" name="option" id="decrypt" value="decrypt" class="js-modcheck">
+							<label for="decrypt"><span></span> Descriptografar</label>
+						</li>
+					</ul>
+				</div>
+			</header>
+
+			<div class="modal-body js-modencrypt">
+				<div class="modal-input">
+					<input type="password" id="message" name="message" placeholder="Considere apenas letras e números." title="Considere apenas letras e números." pattern="[a-z0-9]" class="js-message-enc">
+					<button class="view-btn js-view"></button>	
+				</div>
+				<img src="assets/images/encrypting.gif" alt="Encrypting" title="Encrypting" class="js-animate-enc">
+				<button class="encrypt-btn js-encrypt">Criptografar</button>	
+			</div>
+
+			<div class="modal-body js-moddecrypt">
+				<div class="modal-input js-input">
+					<input type="text" id="message" name="message" placeholder="Digite a mensagem criptografada" title="Digite a mensagem criptografada" pattern="[a-z0-9]" class="js-message-dec">
+					<!-- <button class="view-btn js-view"></button> -->
+				</div>
+				<img src="assets/images/encrypting.gif" alt="Decrypting" title="Decrypting" class="js-animate-enc">
+				<button class="encrypt-btn js-decrypt">Descriptografar</button>	
+			</div>
+		</div>
+
+	</div>
+
+	<!-- jquery and jquery UI -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+
+	<!-- my scripts -->
+	<script src="assets/js/drag.js"></script>
+	<script src="assets/js/check.js"></script>
+	<script src="assets/js/Encryption.js"></script>
+	<script src="assets/js/Decryption.js"></script>
+	<script src="assets/js/CaesarBox.js"></script>
+	<script src="assets/js/CaesarCipher.js"></script>
+	<script src="assets/js/PolyalphabeticCipher.js"></script>
+</body>
+</html>

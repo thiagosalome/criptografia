@@ -1,0 +1,21 @@
+.header{
+	background-color: #37484A;
+	width: 100%;
+	text-align: center;
+}
+
+	.header figure{
+		background-color: #ffffff;
+		display: inline-block;
+		padding: 5px;
+	}
+	
+		.header figure img{
+			width: 120px;
+		}
+
+@media screen and (max-width: 425px){
+	.header figure img{
+    width: 80px;
+	}
+}

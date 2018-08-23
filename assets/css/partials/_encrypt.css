@@ -1,0 +1,79 @@
+.encrypt{
+	margin: 50px 0;
+}
+
+	.encrypt-message{
+		margin: 50px 0 20px;
+		font-size: 18px;
+		color: #333333;
+		z-index: 2;
+	}
+
+	.encrypt-selected{
+		border: 1px solid #333333;
+		padding: 20px;
+		height: 80px;
+	}	
+
+		.encrypt-options li, .encrypt-selected li{
+			background-color: #1B8E99;
+			padding: 8px;
+			color: #ffffff;
+			width: 23.5%;
+			margin-right: 2%;
+			text-align: center;
+			position: relative;
+			float: left;
+			border-radius: 50px;
+		}
+
+		.encrypt-options li:hover, .encrypt-selected li:hover{
+			cursor: move;
+		}
+
+	.encrypt-btn{
+		background-color: #37484A;
+		border: 1px solid #37484A;
+		color: #ffffff;
+		font-size: 20px;
+		margin-top: 20px;
+		padding: 5px 20px;
+		transition: 0.5s;
+		border-radius: 5px;
+	}
+
+		.encrypt-btn:hover{
+			cursor: pointer;
+			background-color: #ffffff;
+			color: #37484A;
+		}
+
+
+@media screen and (max-width: 767px){
+	.encrypt{
+		margin: 30px 0;
+	}
+		.encrypt-message{
+			font-size: 20px;
+			text-align: center;
+			margin: 10px;
+		}
+
+		.encrypt-selected{
+			height: 170px;
+			margin: 30px 0 10px;
+		}	
+
+			.encrypt-options li, .encrypt-selected li{
+				float: none;
+				margin-bottom: 15px;
+				margin: 0 auto 15px auto;
+				width: 90%;
+			}
+		
+		.encrypt-btn{
+			font-size: 20px;
+			width: 100%;
+			margin-top: 15px;
+		}
+}
