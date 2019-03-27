@@ -9,18 +9,18 @@ jQuery(document).ready(function($) {
 		//Checa a opção escolhida pelo usuário e a faz aparecer os campos de preenchimento
 		switch (option) {
 			case 'encrypt':
-				$moddecrypt.slideUp('slow', function(){
+				$moddecrypt.slideUp(300, function(){
 					$(".encrypted-message").remove(); //Remove a mensagem de resposta
-					$(".js-encrypt").fadeIn(100); //Faz o botão de criptografia aparecer novamente
-					$modencrypt.slideDown('slow');
+					$(".js-encrypt").fadeIn(300); //Faz o botão de criptografia aparecer novamente
+					$modencrypt.slideDown(300);
 				});
 				break;
 			case 'decrypt':
 				validDecrypt();
-				$modencrypt.slideUp('slow', function(){
+				$modencrypt.slideUp(300, function(){
 					$(".encrypted-message").remove(); //Remove a mensagem de resposta
-					$(".js-decrypt").fadeIn(100); //Faz o botão de descriptografia aparecer novamente
-					$moddecrypt.slideDown('slow');
+					$(".js-decrypt").fadeIn(300); //Faz o botão de descriptografia aparecer novamente
+					$moddecrypt.slideDown(300);
 				});
 				break;
 			default:

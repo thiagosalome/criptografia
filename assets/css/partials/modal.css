@@ -37,7 +37,7 @@
 				}
 
 					.modal-options li input[type='radio']:checked ~ label span::after{
-						background-color: #1b8e99;
+						background-color: #FFB742;
 						height: 12px;
 						width: 12px;
 					}
@@ -70,7 +70,7 @@
 							position: absolute;
 							top: 50%;
 							transform: translate(-50%,-50%);
-							transition: 1s;
+							transition: 0.3s;
 						}
 
 		.modal-body{

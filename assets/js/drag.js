@@ -21,7 +21,7 @@ jQuery(document).ready(function($) {
 	$(document).on('click', '.js-close', function(e){ 
 		e.stopPropagation();
 		if(e.target.classList[1] === "js-close"){
-			$(".modal").fadeOut("300", function(){
+			$(".modal").fadeOut("100", function(){
 				$(".js-message-enc").val(''); //Limpando o input de encriptação
 				$(".js-message-dec").val(''); //Limpando o input de decriptação
 				$(".modal-body").fadeOut(); //Escondendo o corpo (parte branca) do modal
@@ -65,7 +65,7 @@ var confirmOptions = function(){
 		alert("Não foi selecionada nenhuma cripitografia. ");
 	}
 	else{
-		$(".modal").fadeIn('300');
+		$(".modal").fadeIn('100');
 	}
 }
 
@@ -100,12 +100,12 @@ var encrypted = function(){
 		alert("Para codificar em uma Caixa de César a quantidade total de letras deve possuir uma raiz inteira! Exemplo: 4,9,16");
 	}
 	else{
-		$(".js-encrypt").fadeOut("slow", function() {
-			$(".js-animate-enc").fadeIn("slow");
+		$(".js-encrypt").fadeOut(300, function() {
+			$(".js-animate-enc").fadeIn(300);
 	
 			//Instancia Encryption
 			var enc = new Encryption(dataEncrypt, message);
-			setTimeout(function(){response(enc.encrypt())}, 1000);
+			setTimeout(function(){response(enc.encrypt())}, 300);
 		});
 	}
 }
@@ -127,19 +127,19 @@ var decrypted = function(){
 		alert("A seguinte criptografia não possui o número de caracteres necessários para descriptografar a Caixa de César.");
 	}
 	else{
-		$(".js-decrypt").fadeOut("slow", function() {
-			$(".js-animate-enc").fadeIn("slow");
+		$(".js-decrypt").fadeOut(300, function() {
+			$(".js-animate-enc").fadeIn(300);
 
 			//Instancia Encryption
 			var dec = new Decryption(dataEncrypt, message, complement);
-			setTimeout(function(){response(dec.decrypt())}, 1000);
+			setTimeout(function(){response(dec.decrypt())}, 300);
 		});
 	}
 }
 
 //Função responsável por apresentar a resposta ao usuário
 var response = function(edMessage){
-	$(".js-animate-enc").fadeOut("slow", function() {
+	$(".js-animate-enc").fadeOut(300, function() {
 		$(this).after("<div class='encrypted-message'><span>Resultado: </span>" + edMessage + "</div>");
 	});
 }
