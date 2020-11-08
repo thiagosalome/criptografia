@@ -1,7 +1,8 @@
 <!-- Logo -->
-<p align="center">
-  <img src="./.github/logo.png" alt="Criptografia" title="Criptografia">
-</p>
+<h1 align="center">
+  <img src="./.github/icon.png" alt="Icon" width="40">
+  Criptografia
+</h1>
 
 <!-- Badges -->
 <p align="center">
