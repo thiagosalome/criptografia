@@ -12,7 +12,7 @@ var CaesarBox = function(message){
 		//Seleciona a raiz do tamanho da mensagem, e caso não seja inteira, sempre arredonda para cima
 		var raiz = Math.sqrt(newMessage.length); 
 
-		alert("Modularização da Caixa de César: " + raiz + " x " + raiz);
+		// alert("Modularização da Caixa de César: " + raiz + " x " + raiz);
 
 		//Sabendo se tem uma raiz inteira
 		switch (raiz) {
